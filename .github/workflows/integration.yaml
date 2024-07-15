@@ -12,7 +12,7 @@ on:
       - crates/**
       - tools/**
   push:
-    branches: master
+    branches: [ master, romac/wasm-client ]
     paths:
       - .github/workflows/integration.yaml
       - Cargo.toml
@@ -294,6 +294,7 @@ jobs:
           IBC_CLIENT_WASM_FILE: ${{ github.workspace }}/result/ibc_client_tendermint_cw.wasm
         run: |
           nix build .#ibc-client-tendermint-cw
+          sha256sum ${IBC_CLIENT_WASM_FILE}
           nix shell .#python ${{ matrix.chain.package }} -c \
             cargo nextest run -p ibc-integration-test --no-fail-fast --failure-output final --test-threads=2 \
             --features wasm wasm_client
