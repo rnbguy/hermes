@@ -17,8 +17,8 @@ rustWasmPlatform.buildRustPackage {
   src = nixpkgs.fetchFromGitHub {
     owner = "cosmos";
     repo = "ibc-rs";
-    rev = "d0f7cc41c413bdb1e801acaa566f3e7cf06c2c93";
-    hash = "sha256-LBuP+t7M5KL4a5tbGlALq1B0G3UV3Nqvh4r1X/BgGK0=";
+    rev = "8f4661bda3357045b373ad23b4ee98d191c6a1f9";
+    hash = "sha256-inQ3npOzAdgqV6/9tl8TcLwToR7q3zA7+77yFzilzRY=";
   };
 
   cargoLock = {

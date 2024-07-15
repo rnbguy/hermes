@@ -31,7 +31,6 @@ env:
   RUST_BACKTRACE: short
   CARGO_NET_RETRY: 10
   RUSTUP_MAX_RETRIES: 10
-  UPLOAD_WASM_RUN_ID: 8771446396
 
 # Cancel previous runs of this workflow when a new commit is added to the PR, branch or tag
 concurrency:
